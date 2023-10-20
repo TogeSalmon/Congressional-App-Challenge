@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MediaRecorder API - Sample</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="WebRTC getUserMedia MediaRecorder API">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe Script', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin: 2rem 0;
+            text-indent: 40px; 
+        }
+
+        button {
+            margin: 10px 5px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        li {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        body {
+            width: 100%;
+            max-width: 100%;
+            margin: 0px auto;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        #btns {
+            display: none;
+        }
+
+        #gUMArea {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #mediaVideo {
+            margin-right: 5px;
+        }
+
+        #content {
+            position: relative;
+            width: 100%;
+            height: 380px;
+        }
+
+        #file-input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 3;
+        }
+
+        #canvas {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #336aa8;
+        }
+
+        audio {
+            position: absolute;
+            left: 10px;
+            bottom: -70px;
+            width: calc(100% - 25px);
+            z-index: 3;
+        }
+
+        #file-name {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            z-index: 3;
+            font-family: monospace;
+        }
+
+        #file-input {
+            position: fixed;
+            top: 395px;
+            left: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Bb.html">Note Audios!</a>
+        <a href="./record.html">Record Audio</a>
+    </nav>
+
+    <h1>Record Your Audio!</h1>
+   
+    <nav>
+      <a href="./RecordC.html">C Note Graph</a>
+      <a href="./RecordD.html">D Note Graph</a>
+      <a href="./RecordE.html">E Note Graph</a>
+      <a href="./RecordF.html">F Note Graph</a>
+      <a href="./RecordG.html">G Note Graph</a>
+      <a href="./RecordA.html">A Note Graph</a>
+    </nav>
+
+    <p>Welcome to the Record and Compare section, designed especially for those who have a hard time hearing.</p>
+
+    <p>Here, you can explore various musical notes from the navigation bar above. 
+      The links will lead to different sound wave graphs that provide a vague idea of what the notes on the website look like.
+    </p>
+
+    <p>But that's not all! You can also record yourself playing the clarinet, 
+      and see your recorded sound wave graph. This allows you to assess your accuracy and 
+      improve your musical skills.
+    </p>
+    <div id='gUMArea'>
+        <div>
+            Record:
+            <input type="radio" name="media" value="video" checked id='mediaVideo' hidden>
+            <input type="radio" name="media" value="audio" checked id='mediaVideo'>audio
+        </div>
+        <button id='gUMbtn'>Record Yourself</button>
+    </div>
+    <div id='btns'>
+        <button id='start'>Start</button>
+        <button id='stop'>Stop</button>
+    </div>
+    <div>
+        <ul class="list-unstyled" id='ul'></ul>
+    </div>
+
+    <div id="content">
+        <input type="file" id="file-input" accept="audio/*,video/*,image/*" />
+        <canvas id="canvas" style="border:2px solid #336aa8"></canvas>
+        <h3 id="file-name"></h3>
+        <audio id="audio" controls></audio>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="recordscript.js"></script>
+</body>
+
+</html>

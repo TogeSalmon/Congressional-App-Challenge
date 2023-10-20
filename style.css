@@ -1,0 +1,16 @@
+.note {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.fingering {
+    max-width: 150px;
+    display: block;
+    margin: 10px auto;
+}
+
+.waveform {
+    height: 80px;
+    background: #f7f7f7;
+}

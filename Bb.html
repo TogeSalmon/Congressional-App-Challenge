@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bb Clarinet Practice for Hearing Impaired</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe Script', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        h1 {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        #notes-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .note {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #fff;
+        }
+
+        .note h2 {
+            font-size: 24px;
+        }
+
+        .fingering {
+            max-width: 100%;
+            display: block;
+            margin: 1rem auto;
+        }
+
+        .play {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .page-description {
+            text-align: center;
+            margin: 2rem auto;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Bb.html">Note Audios!</a>
+        <a href="./record.html">Record Audio</a>
+    </nav>
+
+    <h1>Bb Clarinet Practice!</h1>
+
+    <div class="page-description">
+        <p>This section is designed to help you get a general idea of what the basic notes of the clarinet sound like. Explore the notes below and practice your clarinet skills!</p>
+    </div>
+
+
+    <div id="notes-container">
+        <!-- Placeholder for notes -->
+    </div>
+
+    <canvas id="frequency-canvas" width="800" height="400"></canvas>
+
+    <template id="note-template">
+        <div class="note">
+            <h2></h2>
+            <img class="fingering" alt="Fingering">
+            <button class="play">Play</button>
+        </div>
+    </template>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
